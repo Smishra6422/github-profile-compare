@@ -7,15 +7,17 @@ import {
   fetchAddGithubListSuccess,
   fetchGithubListFailure,
 } from "./github-action";
+import { GITHUB_API } from "./github-api";
 
 export function* fetchAddGithubProfileAsync({ payload }) {
   try {
     yield console.log(payload);
-    //   const fetchResult = yield call(axios.post, "/api/addphonebook", otherProps);
-
-    yield put(fetchAddGithubListSuccess());
+    const fetchResult = yield call(axios.get, `${GITHUB_API}${payload}`);
+    console.log(fetchResult);
+    yield put(fetchAddGithubListSuccess(fetchResult.data));
   } catch (error) {
-    yield put(fetchGithubListFailure(error));
+    // console.log(error.response);
+    yield put(fetchGithubListFailure({ error: error.response }));
   }
 }
 

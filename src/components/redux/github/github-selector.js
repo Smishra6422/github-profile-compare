@@ -9,7 +9,8 @@ export const selectGithubProfileList = createSelector(
 
 export const selectFilteredGithubProfile = createSelector(
   [selectGithubProfileList],
-  (githubProfiles) => githubProfiles.sort((a, b) => a - b)
+  (githubProfiles) =>
+    githubProfiles.sort((a, b) => b.public_repos - a.public_repos)
   // //TODO: Filter according to repo
 );
 
