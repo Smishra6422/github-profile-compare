@@ -11,13 +11,10 @@ import { GITHUB_API } from "./github-api";
 
 export function* fetchAddGithubProfileAsync({ payload }) {
   try {
-    yield console.log(payload);
     const fetchResult = yield call(axios.get, `${GITHUB_API}${payload}`);
-    console.log(fetchResult);
     yield put(fetchAddGithubListSuccess(fetchResult.data));
   } catch (error) {
-    // console.log(error.response);
-    yield put(fetchGithubListFailure({ error: error.response }));
+    yield put(fetchGithubListFailure({ error: "Not found" }));
   }
 }
 

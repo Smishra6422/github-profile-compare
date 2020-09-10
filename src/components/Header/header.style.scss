@@ -3,7 +3,6 @@
 .header-container {
   h1 {
     font-size: 4rem;
-    //   line-height: calc(20px + 20vh);
     padding: 3rem 0 1.7rem 0;
     margin-bottom: 0;
 
@@ -58,5 +57,37 @@
     text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500,
       0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
     color: #fff6a9;
+  }
+}
+
+@media(max-width:50rem) {
+  .header-container {
+    h1 {
+      font-size: 3rem;
+      padding: 2rem 0 1.1rem 0;
+      margin-bottom: 0;
+  
+    }
+  }
+}
+
+@media(max-width:40rem) {
+  .header-container {
+    h1 {
+      font-size: 2.6rem;
+      padding: 1.7rem 0 0.8rem 0;
+      margin-bottom: 0;
+  
+    }
+  }
+}
+
+@media(max-width:25rem) {
+  .header-container {
+    h1 {
+      font-size: 2.2rem;
+      padding: 1.2rem 0 0.7rem 0;
+  
+    }
   }
 }

@@ -9,9 +9,9 @@ export const selectGithubProfileList = createSelector(
 
 export const selectFilteredGithubProfile = createSelector(
   [selectGithubProfileList],
-  (githubProfiles) =>
-    githubProfiles.sort((a, b) => b.public_repos - a.public_repos)
-  // //TODO: Filter according to repo
+  (githubProfiles) => {
+    return githubProfiles.sort((a, b) => b.public_repos - a.public_repos);
+  }
 );
 
 export const selectGithubListFetching = createSelector(
@@ -22,4 +22,9 @@ export const selectGithubListFetching = createSelector(
 export const selectGithubListError = createSelector(
   [selectGithub],
   (github) => github.isProfileError
+);
+
+export const selectIsGithubProfileAdded = createSelector(
+  [selectGithub],
+  (github) => github.isProfileAdded
 );

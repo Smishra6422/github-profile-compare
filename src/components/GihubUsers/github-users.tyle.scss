@@ -1,0 +1,44 @@
+.data-container {
+  width: 40%;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  min-height: 66vh;
+  background: #141414;
+
+  justify-content: space-between;
+
+  
+
+  .no-user-container {
+    position: absolute;
+    top: 0rem;
+    height: 50vh;
+    width: 100%;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 69rem) {
+  .data-container {
+    width: 55%;
+  }
+}
+
+@media (max-width: 50rem) {
+  .data-container {
+    width: 80%;
+    min-height: 78vh;
+  }
+}
+
+@media (max-width: 40rem) {
+  .data-container {
+    width: 90%;
+  }
+}
