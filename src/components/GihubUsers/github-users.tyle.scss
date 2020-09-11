@@ -4,12 +4,8 @@
   display: flex;
   flex-wrap: wrap;
   position: relative;
-  min-height: 66vh;
-  background: #141414;
+  min-height: 50vh;
 
-  justify-content: space-between;
-
-  
 
   .no-user-container {
     position: absolute;
@@ -33,7 +29,6 @@
 @media (max-width: 50rem) {
   .data-container {
     width: 80%;
-    min-height: 78vh;
   }
 }
 

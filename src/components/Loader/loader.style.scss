@@ -1,8 +1,17 @@
 .loader {
     position: absolute;
-    height: 60vh;
+    height: 50vh;
     width: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+   .loader-background {
+     background: #141414;
+     opacity: 0.9;
+     padding: 18px;
+    display: flex;
+    border-radius: 10px;
+    border: 2px solid #90caf9;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -44,5 +53,6 @@
         color: #4caf50;
       }
     }
+   }
     
   }
